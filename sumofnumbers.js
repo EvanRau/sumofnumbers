@@ -14,6 +14,7 @@ function sumWhile(list){
   let i = 0;
   while(i <list.length){
     total+=list[i];
+    i++;
   }
   return total;
 }
@@ -21,9 +22,13 @@ function sumWhile(list){
 console.log(sumWhile(testNums));
 
 function sumRecursion(list){
-
+  if(list.length===0){
+    return 0;
+  }
+  return list[0] + sumRecursion(list.slice(1, list.length));
 }
 
+console.log(sumRecursion(testNums));
 function sumUnderscore(list){
 
 }
