@@ -1,19 +1,19 @@
-const testNums = [1, 2, 3 ,4];
+const testNums = [1, 2, 3, 4];
 
-function sumFor(list){
+function sumFor(list) {
   let total = 0;
-  for(const num of list) {
+  for (const num of list) {
     total += num;
   }
   return total;
 }
 
 console.log(sumFor(testNums));
-function sumWhile(list){
+function sumWhile(list) {
   let total = 0;
   let i = 0;
-  while(i <list.length){
-    total+=list[i];
+  while (i < list.length) {
+    total += list[i];
     i++;
   }
   return total;
@@ -21,16 +21,16 @@ function sumWhile(list){
 
 console.log(sumWhile(testNums));
 
-function sumRecursion(list){
-  if(list.length===0){
+function sumRecursion(list) {
+  if (list.length === 0) {
     return 0;
   }
   return list[0] + sumRecursion(list.slice(1, list.length));
 }
 
 console.log(sumRecursion(testNums));
-function sumUnderscore(list){
-  return _.reduce(list, function(memo, num) {return memo + num; }, 0);
+function sumUnderscore(list) {
+  return _.reduce(list, function (memo, num) { return memo + num; }, 0);
 }
 
-console.log(sumRecursion(testNums));
+console.log(sumUnderscore(testNums));
